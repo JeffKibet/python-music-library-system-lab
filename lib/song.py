@@ -22,3 +22,9 @@ class Song:
     def add_song_to_count(cls):
         """Increment the total song count by one."""
         cls.count += 1
+
+    @classmethod
+    def add_to_genres(cls, genre):
+        """Add a genre to the genres list, keeping entries unique."""
+        if genre not in cls.genres:
+            cls.genres.append(genre)
