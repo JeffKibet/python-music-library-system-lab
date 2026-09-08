@@ -15,3 +15,10 @@ class Song:
         Song.add_to_artists(artist)
         Song.add_to_genre_count(genre)
         Song.add_to_artists_count(artist)
+
+    def __repr__(self):
+        return f"<Song: '{self.name}' by {self.artist} ({self.genre})>"
+
+    def add_song_to_count(cls):
+        """Increment the total song count by one."""
+        cls.count += 1
