@@ -52,3 +52,15 @@ class Song:
             cls.artists_count[artist] += 1
         else:
             cls.artists_count[artist] = 1
+
+if __name__ == "__main__":
+    song1 = Song("Alright", "Kendrick Lamar", "Rap")
+    song2 = Song("HUMBLE.", "Kendrick Lamar", "Rap")
+    song3 = Song("Blinding Lights", "The Weeknd", "Pop")
+    song4 = Song("Old Town Road", "Lil Nas X", "Country")
+ 
+    print("Total songs:", Song.count)
+    print("All artists:", Song.artists)
+    print("All genres:", Song.genres)
+    print("Genre counts:", Song.genre_count)
+    print("Artist counts:", Song.artists_count)
