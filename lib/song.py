@@ -28,3 +28,27 @@ class Song:
         """Add a genre to the genres list, keeping entries unique."""
         if genre not in cls.genres:
             cls.genres.append(genre)
+
+    @classmethod
+    def add_to_artists(cls, artist):
+        """Add an artist to the artists list, keeping entries unique."""
+        if artist not in cls.artists:
+            cls.artists.append(artist)
+
+    @classmethod
+    def add_to_genre_count(cls, genre):
+        """Increment the count for this genre, creating the key
+        with a starting value of 1 if it doesn't exist yet."""
+        if genre in cls.genre_count:
+            cls.genre_count[genre] += 1
+        else:
+            cls.genre_count[genre] = 1
+
+    @classmethod
+    def add_to_artists_count(cls, artist):
+        """Increment the count for this artist, creating the key
+        with a starting value of 1 if it doesn't exist yet."""
+        if artist in cls.artists_count:
+            cls.artists_count[artist] += 1
+        else:
+            cls.artists_count[artist] = 1
