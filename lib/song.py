@@ -9,3 +9,9 @@ class Song:
         self.name = name
         self.artist = artist
         self.genre = genre
+
+        Song.add_song_to_count()
+        Song.add_to_genres(genre)
+        Song.add_to_artists(artist)
+        Song.add_to_genre_count(genre)
+        Song.add_to_artists_count(artist)
